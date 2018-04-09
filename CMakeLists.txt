@@ -14,7 +14,7 @@ set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -Wall")
 file(GLOB SRC_FILES ${TEST_DIR}/*.c)
 
 include_directories(${ROOT_DIR} ${TEST_DIR}/snow)
-message(STATUS ${SRC_FILES})
+
 add_executable(${PRJ_NAME} ${SRC_FILES})
 
 add_custom_target(run-test
