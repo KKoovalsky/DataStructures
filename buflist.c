@@ -39,6 +39,12 @@ void add_buf_to_buflist(struct doubly_linked_list *l, const char *buf, size_t le
 
 char *concat_buflist_and_rm(struct doubly_linked_list *l, size_t *len)
 {
+	if(!l->head)
+	{
+		*len = 0;
+		return NULL;
+	}
+
 	size_t total_len = 0;
 	for_each_in_dl_list(struct buf_entry, elem, (*l))
 		total_len += elem->len;
