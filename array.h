@@ -18,13 +18,13 @@
 typedef bool (*arr_search_checker)(void *, void *);
 
 /**
- * @brief	Function used only for dynamically allocated arrays to search for a match
+ * @brief	Function used for arrays to search for a match
  *
  *			In C++ one would not use the checker function as only could override '==' operator and use '=='
  *			operator on each element. Then the checker could be removed. The checker is kind of replacement of
  *			this C++ feature.
  *
- * @param[in] arr		Pointer to a dynamically allocated array
+ * @param[in] arr		Pointer to an array
  * @param[in] elem_size	Size of single element in the array (use sizeof for that parameter)
  * @param[in] len		Length of the array (number of elements in the array)
  * @param[in] v			Pointer to a function which checks whether a match is found @see arr_search_checker
