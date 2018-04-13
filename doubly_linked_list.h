@@ -7,11 +7,19 @@
 #define DOUBLY_LINKED_LIST_H
 
 #ifdef __FREERTOS__
+#ifndef alloc_mem
 #define alloc_mem		pvPortMalloc
+#endif
+#ifndef free_mem
 #define free_mem		vPortFree
+#endif
 #else
+#ifndef alloc_mem
 #define alloc_mem		malloc
+#endif
+#ifndef free_mem
 #define free_mem		free
+#endif
 #endif
 
 #include <stdio.h>
