@@ -81,4 +81,5 @@ void dl_list_delete(struct doubly_linked_list *l)
 {
 	while(l->head)
 		dl_list_remove_node(l, l->head);
+	l->head = l->tail = NULL;
 }
